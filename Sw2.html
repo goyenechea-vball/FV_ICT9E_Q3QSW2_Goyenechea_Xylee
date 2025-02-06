@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<style>
+		body{
+			background-image: url('https://i.pinimg.com/736x/49/b0/74/49b0745d1e09e25ad2d5a88c30603aeb.jpg');
+			background-repeat: no-repeat;
+			background-size: 1600px 750px;
+		} 
+		img{
+			margin-top: 50px;
+		}
+		
+	</style>
+	<title>Q3Prac3</title>
+</head>
+<body>
+<center>
+	<div class="row">
+	<div class="col-md-3">
+		<img src="https://i.pinimg.com/236x/0c/9c/81/0c9c816ba622afebf2f7bcc340913cc4.jpg">
+		<p style="color: #f5faf5";>こんにちは, Megumi here. Type 2 different values then click one of the buttons to solve.</p>
+	</div>
+	<div class="col-md-8">
+	<form>
+		<br><br>
+		<label style="color: #f5faf5; font-family: serif;">Enter a Value for A:</label>
+			<input type="text" id="num1" class="form-control" style="background-color: #62a3d9;">
+		<br>
+		<label style="color: #f5faf5; font-family: monospace;">Enter a Value for B:</label>
+			<input type="text" id="num2" class="form-control" style="background-color: #62a3d9;">
+			<br>
+		<button type="Submit" class="btn btn-success" onclick="multiply()">Multiply</button>
+		<button type="Submit" class="btn btn-success" onclick="greaterthan()">Is A greater than B</button>
+		<button type="Submit" class="btn btn-success" onclick="lessandequal()">Is A less than 4 while B is equal to 10</button>
+		<button type="Submit" class="btn btn-success" onclick="quotient()">Divide</button>
+
+	</form>
+	</div>
+</center>
+
+	<script>
+		function multiply(){
+			var num1 = document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var product = Number(num1) * Number(num2);
+				document.write("<body style='color: #ed5cd4;'>'The product is: " + product);
+		}
+		function greaterthan(){
+			var num1 = document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var ans = Number(num1) > Number(num2);
+				document.write("<body style='color: #ed5cd4;'>'The answer is: " + ans);
+		}
+		function lessandequal(){
+			var num1 = document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var ans2 = (Number(num1) < 4) && (Number(num2) == 10);
+				document.write("<body style='color: #ed5cd4;'>'The answer is: " + ans2);
+		}
+		function quotient(){
+			var num1 = document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var quotient = Number(num1) / Number(num2);
+				document.write("<body style='color: #ed5cd4;'>'The quotient is: " + quotient);
+		}
+	</script>
+
+</body>
+</html>
